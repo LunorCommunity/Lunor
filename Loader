@@ -1,0 +1,21 @@
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
+local creator = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Creator.CreatorTargetId
+
+local games = {
+    [7381705] = 'https://api.luarmor.net/files/v3/loaders/f6c9f276f7d6a7dd6edfd0173d7a211d.lua', -- Fisch
+    [11867394] = 'https://api.luarmor.net/files/v3/loaders/725ce097c244a8e5ee7cd4625820718a.lua', -- DR
+    [34644452] = 'https://api.luarmor.net/files/v3/loaders/7d62d8d6c100c07fe0bee9ca371cdffe.lua', -- AC
+    [35687503] = 'https://api.luarmor.net/files/v3/loaders/5a8678a607751f74d8042b9b46bf00c8.lua', -- Hunters
+    [3333298] = 'https://api.luarmor.net/files/v3/loaders/4df8f816d04143ecfb2f7523fbeeaf39.lua', -- BGSI
+    [35497641] = 'https://api.luarmor.net/files/v3/loaders/cccaa6a48dd3ed21c126fc184b75b1f1.lua', -- Beaks
+}
+
+if games[creator] then
+    loadstring(game:HttpGet(games[creator]))()
+else
+    warn("Unsupported game")
+end
+return(function(...)local a={"T/zZWLgC12v=";"G2gpU2zP","VaxOWa8RAXS4V/zI1nH4ALzr1qSCWB4rGkT9VBSrVn8r8u8k8elX8uWDzeMOfulgzelDfqS5VnskVaC4V7S204GVv4hIGkbvf2TbUvUgV2gM/oMOqnUYz7s40/sNUkYxuuHgboZBqkSoVIZAVOSczMhw+ZWDWvhQxt==";"Ve4gfaJe2BgkvaZNTT+=","qaxOWMGZGt==","bk7yb+==","/oSjb2D=";"TkT9VBSrVp==","/oSNUp==";"VaxOWa8RAXSXU/W6bkZOVaT9G/zZWLzr1NxZ1N+6UkSyAnZZWkYhbBTR09S7Vn8pGLMr127h19SdxozH";"1BSCbazOWLZ6bp==","/oSh1LxZ0t==";"GLTPWaHrfc4D"}local function r(r)return a[r+1298]end for r,F in ipairs({{1;13};{1;11};{12;13}})do while F[1]<F[2]do a[F[1]],a[F[2]],F[1],F[2]=a[F[2]],a[F[1]],F[1]+1,F[2]-1 end end do local r=string.sub local F=table.insert local O=math.floor local N=string.char local M=string.len local w={["5"]=10;r=47;F=60,Y=49;T=21;B=6,w=40,S=61;R=58,H=9;A=11,q=18,j=44,V=26;M=4;b=25,["3"]=59;p=48;I=35,Z=37,D=56;v=20,a=7;y=45;W=28;t=0;J=8,o=53,["4"]=36,N=39,i=31;["0"]=30,Q=42;c=3;g=57;["1"]=27,C=33;O=52,e=51,U=24;["7"]=5,X=50;K=62,P=43;z=13;["+"]=16,["9"]=34;m=63,L=38;["6"]=46;k=54,["8"]=12,n=55,x=17,l=32,G=29,u=19,["/"]=23,f=14;["2"]=22;s=1;E=15,d=2;h=41}local s=type local l=table.concat local A=a for a=1,#A,1 do local P=A[a]if s(P)=="string"then local s=M(P)local K={}local i=1 local b=0 local L=0 while i<=s do local a=r(P,i,i)local M=w[a]if M then b=b+M*64^(3-L)L=L+1 if L==4 then L=0 local a=O(b/65536)local r=O((b%65536)/256)local M=b%256 F(K,N(a,r,M))b=0 end elseif a=="="then F(K,N(O(b/65536)))if i>=s or r(P,i+1,i+1)~="="then F(K,N(O((b%65536)/256)))end break end i=i+1 end A[a]=l(K)end end end return(function(a,O,N,M,w,s,l,i,b,A,L,F,K,P,W,t)F,P,t,i,b,L,K,W,A=function(F,N,M,w)local K,A,P,i,b,l,L,t while F do l=r(-1286)P=r(-1292)A=N F=r(-1287)K=r(-1289)a[l]=F l=r(-1297)F=a[r(-1296)]a[P]=l l={}L=r(-1290)P=a[K]i=r(-1294)b=a[i]t=r(-1295)t=b[t]i={t(b,L)}K=P(O(i))P=K()end F=#w return O(l)end,{},function(a)P[a]=P[a]-1 if 0==P[a]then P[a],A[a]=nil,nil end end,0,function(a)for r=1,#a,1 do P[a[r]]=P[a[r]]+1 end if N then local F=N(true)local O=w(F)O[r(-1288)],O[r(-1291)],O[r(-1293)]=a,L,function()return-253576 end return F else return M({},{[r(-1291)]=L;[r(-1288)]=a;[r(-1293)]=function()return-253576 end})end end,function(a)local r,F=1,a[1]while F do P[F],r=P[F]-1,r+1 if 0==P[F]then P[F],A[F]=nil,nil end F=a[r]end end,function()i=1+i P[i]=1 return i end,function(a,r)local O=b(r)local N=function(...)return F(a,{...},r,O)end return N end,{}return(W(6431940,{}))(O(l))end)(getfenv and getfenv()or _ENV,unpack or table[r(-1285)],newproxy,setmetatable,getmetatable,select,{...})end)(...)
